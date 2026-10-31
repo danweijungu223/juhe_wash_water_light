@@ -1,0 +1,17 @@
+[
+ {
+  "name": "FREEMODBUS",
+  "path": "/packages/iot/freemodbus",
+  "ver": "v1.6.0"
+ },
+ {
+  "name": "NETUTILS",
+  "path": "/packages/iot/netutils",
+  "ver": "v1.3.2"
+ },
+ {
+  "name": "CJSON",
+  "path": "/packages/language/JSON/cJSON",
+  "ver": "v1.7.16"
+ }
+]
