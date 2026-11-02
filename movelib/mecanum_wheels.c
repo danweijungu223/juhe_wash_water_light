@@ -52,9 +52,9 @@ void CalcMecanumWheelWheelsSpeed(float * motors, float x, float y, float yaw_z, 
 
 //  推进器输出
 void MotorPwmOut_4wheels(const int16_t* output) {
-	PD15_PWM_OUT_US(output[0]);
-	PD14_PWM_OUT_US(output[1]);
-	PD13_PWM_OUT_US(output[2]);
-	PD12_PWM_OUT_US(output[2]);
-	PE9_PWM_OUT_US(output[3]);
+//	PD15_PWM_OUT_US(output[0]);
+//	PD14_PWM_OUT_US(output[1]);
+//	PD13_PWM_OUT_US(output[2]);
+//	PD12_PWM_OUT_US(output[2]);
+//	PE9_PWM_OUT_US(output[3]);
 }

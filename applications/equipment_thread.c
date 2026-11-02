@@ -81,12 +81,13 @@ void EquipmentThreadEntry(void* parameter){
             #endif
         }
 
+
         // 声纳控制（独立于直接控制模式）
-        if(get_control_msg()->equip_switch.sonar) {
-            PD15_PWM_OUT_US(20001);
-        } else {
-            PD15_PWM_OUT_US(0);
-        }
+//        if(get_control_msg()->equip_switch.sonar) {
+//            PD15_PWM_OUT_US(20001);
+//        } else {
+//            PD15_PWM_OUT_US(0);
+//        }
         LOG_D("sonar : %d\r\n",get_control_msg()->equip_switch.sonar);
 
         // 输出到硬件
@@ -99,9 +100,19 @@ void EquipmentThreadEntry(void* parameter){
             // equipment_output[4] 和 equipment_output[5] 需要根据实际硬件连接配置
         #elif defined(PUSHES_OUT_SWITCH) && PUSHES_OUT_SWITCH == 2
             // CAN总线输出模式
-            EquipmentTxDataConvertAndSend(0, equipment_output[0], equipment_output[1], equipment_output[3], 3);
+//            EquipmentTxDataConvertAndSend(0, equipment_output[0], equipment_output[1], equipment_output[3], 3);
             // 其他设备可能需要额外的CAN消息
         #endif
+
+        PE9_PWM_OUT_US(20000);
+        PE11_PWM_OUT_US(20000);
+        PE13_PWM_OUT_US(20000);
+        PE14_PWM_OUT_US(20000);
+
+        PD12_PWM_OUT_US(20000);
+        PD13_PWM_OUT_US(20000);
+        PD14_PWM_OUT_US(20000);
+        PD15_PWM_OUT_US(20000);
 
         rt_thread_delay(20);  // 与rov_move_thread保持相同的周期
     }

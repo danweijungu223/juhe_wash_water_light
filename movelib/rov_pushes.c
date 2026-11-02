@@ -72,11 +72,11 @@ void CalcVerticalDirectionMotorsSpeed_4pushes(float * motors, float z, float rol
 
 //  推进器输出
 void MotorPwmOut_6pushes(const int16_t* output) {
-	PD15_PWM_OUT_US(output[0]);
-	PD14_PWM_OUT_US(output[1]);
-//	PD13_PWM_OUT_US(output[2]);
-	PD12_PWM_OUT_US(output[2]);
-	PE9_PWM_OUT_US(output[3]);
-	PE11_PWM_OUT_US(output[4]);
-	PE13_PWM_OUT_US(output[5]);
+//	PD15_PWM_OUT_US(output[0]);
+//	PD14_PWM_OUT_US(output[1]);
+////	PD13_PWM_OUT_US(output[2]);
+//	PD12_PWM_OUT_US(output[2]);
+//	PE9_PWM_OUT_US(output[3]);
+//	PE11_PWM_OUT_US(output[4]);
+//	PE13_PWM_OUT_US(output[5]);
 }

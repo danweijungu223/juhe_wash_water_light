@@ -35,7 +35,7 @@
 #define RT_USING_DEVICE
 #define RT_USING_CONSOLE
 #define RT_CONSOLEBUF_SIZE 256
-#define RT_CONSOLE_DEVICE_NAME "uart3"
+#define RT_CONSOLE_DEVICE_NAME "uart6"
 /* end of Kernel Device Object */
 #define RT_VER_NUM 0x30105
 /* end of RT-Thread Kernel */
