@@ -58,6 +58,6 @@ void WheelTxDataConvertAndSend(int *arr);
 void Sht30RxDataConvert(const uint8_t* c_msg);
 
 void EquipmentDate(const uint8_t* c_msg);
-uint8_t get_water_light();
+uint16_t get_water_light();
 
 #endif /* _MOTOR_CONTROL_CENTER_H_ */

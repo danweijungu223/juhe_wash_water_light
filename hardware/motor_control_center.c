@@ -161,12 +161,12 @@ void Sht30RxDataConvert(const uint8_t* c_msg){
         RobolinkUdpCreateInitSendNewMsgToMb((uint8_t*)&temp, sizeof(float), 0x03, 0x03, 0x04);
 }
 
-static uint8_t water_light = 0;
-uint8_t get_water_light(){
+static uint16_t water_light = 0;
+uint16_t get_water_light(){
     return water_light;
 }
 
 void EquipmentDate(const uint8_t* c_msg) {
-    water_light = c_msg[0];
+    water_light = (uint16_t)c_msg[0] | ((uint16_t)c_msg[1] << 8);
 }
 

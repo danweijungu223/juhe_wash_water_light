@@ -138,9 +138,9 @@ inline static int Can1RxAnalysis(uint32_t id, uint32_t IDE, uint32_t RTR, uint32
 			case CAN1_RX_ID_WATER_WARNING:
 				print_rl_udp(0x04, "Motor Control Center Leakage warning !");
 				return CAN1_RX_ID_WATER_WARNING;
-			case 0x50:
-
-			    return 0x50;
+			case 0x250:
+			    EquipmentDate(rx_data);
+			    return 0x250;
 			case CAN1_RX_ID_SHT30_AND_WATER_WARNING:
 				Sht30RxDataConvert(rx_data);
 			default:
